@@ -17,7 +17,9 @@ class Cleric {
 
   void selfAid() {
     if (mp < 5) {                         //셀프 에이드에 조건이 있어 조건식인 if 사용
-      print('마나가 부족합니다.');
+      if (kDebugMode) {
+        print('마나가 부족합니다.');
+      }
     } else {
       mp -= 5;
       print('${name}이 자기 치료를 했습니다. HP: ${hp}, MP: ${mp}');
